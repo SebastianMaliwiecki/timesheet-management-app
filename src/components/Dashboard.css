@@ -1,0 +1,40 @@
+.signUpPage {
+    background: rgb(235,235,235);
+    height: 100vh;
+}
+
+.signUpWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white !important;
+    width: 560px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    width: 530px;
+    height: auto;
+    text-align: center;
+}
+
+.signUp {
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.options {
+    margin-top: 28px;
+}
+
+@media screen and (max-width : 800px) {
+    .signUpWrap {
+        width: 300px;
+    }
+    .signUp {
+        width: auto;
+        text-align: center;
+    }
+}

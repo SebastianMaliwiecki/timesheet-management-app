@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
 
 const authContext = React.createContext();
 
@@ -25,15 +25,24 @@ export function AuthProvider({ children }) {
 
     // Add user detail to authenticaiton
     const signUp = (email, password) => {
-        return auth.createUserWithEmailAndPassword(email, password)
+        return auth.createUserWithEmailAndPassword(email, password);
     };
 
     const Login = (email, password) => {
-        return auth.signInWithEmailAndPassword(email, password)
+        return auth.signInWithEmailAndPassword(email, password);
     };
      
     const Logout = () => { 
-        auth.signOut(); 
+        return auth.signOut(); 
+    };
+
+    const insertUserInfo = (email, password, firstName, lastName) => {
+        return db.collection('users').doc(email).set({
+            Firstname: firstName,
+            Lastname: lastName,
+            Email: email,
+            Password: password
+        })
     };
 
     // Our context 
@@ -42,6 +51,7 @@ export function AuthProvider({ children }) {
         signUp,
         Login,
         Logout,
+        insertUserInfo,
     };
 
     return (

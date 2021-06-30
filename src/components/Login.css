@@ -18,28 +18,30 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 25px;
+    border-radius: 10px;
     padding: 15px;
     background-color: white !important;
     width: 560px;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: left;
     width: 530px;
+    height: auto;
 }
 
 .loginForm {
     width: 400px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 40px;
 }
 
 h1 {
     color: #555;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     width: 100%;
     display: block;
-    padding-top: 32px;
+    padding-top: 20px;
     padding-bottom: 32px;
 }
 
@@ -58,6 +60,8 @@ input {
     color: red;
     font-weight: bold;
     margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .errorMessageFalse {
@@ -68,7 +72,6 @@ label {
     font-size: 15px;
     color: #555;
     line-height: 1.4;
-    text-transform: uppercase;
     padding-bottom: 10px;
 }
 
@@ -77,5 +80,45 @@ label {
 }
 
 button {
-    
+    margin-top: 30px;
+    padding: 12px 18px;
+    background-color: white;
+    color: black;
+    transition: .4s ease-in-out;
+    border-radius: 0px;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 2px;
+    border: solid 0.1px #555;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(53, 52, 52);
+    color: white;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+}
+
+@media screen and (max-width : 800px) {
+    .loginFormWrap {
+        width: 300px;
+    }
+    .loginForm {
+        width: auto;
+        text-align: center;
+    }
+}
+
+.formOptions {
+    text-align: center;
 }
