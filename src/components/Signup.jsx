@@ -61,6 +61,7 @@ export default function Signup() {
                                         id="firstName"
                                         label="First Name"
                                         autoFocus
+                                        inputRef={firstNameRef}
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
@@ -71,6 +72,7 @@ export default function Signup() {
                                         label="Last Name"
                                         name="lastName"
                                         autoComplete="lname"
+                                        inputRef={lastNameRef}
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={12}>
@@ -81,6 +83,7 @@ export default function Signup() {
                                         label="Email Address"
                                         name="email"
                                         autoComplete="email"
+                                        inputRef={emailRef}
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={12}>
@@ -92,6 +95,7 @@ export default function Signup() {
                                         type="password"
                                         id="password"
                                         autoComplete="current-password"
+                                        inputRef={passRef}
                                     />
                                 </Grid>
                             </Grid>
